@@ -3,6 +3,7 @@ package moonee;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.Configuration;
 import moonee.ee.EEBlock;
 import moonee.ee.EEItem;
 import moonee.ee.network.EEPacketHandler;
@@ -30,6 +31,13 @@ public class mod_EE {
 
 	@PreInit
 	public void load(FMLPreInitializationEvent event) {
+        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+		
+		config.load();
+		
+		//Hey Z, put yo shit here.
+		
+		config.save();
 	}
 
 	@Init
