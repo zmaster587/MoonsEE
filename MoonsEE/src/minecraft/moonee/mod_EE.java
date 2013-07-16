@@ -9,6 +9,7 @@ import moonee.ee.EEItem;
 import moonee.ee.network.EEPacketHandler;
 import moonee.ee.network.EEServerProxy;
 import moonee.ee.network.GuiHandler;
+import moonee.ee.util.EEConfig;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -31,17 +32,13 @@ public class mod_EE {
 
 	@PreInit
 	public void load(FMLPreInitializationEvent event) {
-        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-		
-		config.load();
-		
-		//Hey Z, put yo shit here.
-		
-		config.save();
+		System.out.println("==== Moon's EE: PreInitializating ====");
+		EEConfig.config(event);
 	}
 
 	@Init
 	public void load(FMLInitializationEvent event) {
+		System.out.println("==== Moon's EE: Initializating ====");
 		LanguageRegistry.instance().addStringLocalization("mod_EE.EEtab",
 				"en_US", "Moon's EE 2.5");
 		EEBlock.init();

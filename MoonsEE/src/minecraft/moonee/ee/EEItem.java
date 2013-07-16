@@ -145,6 +145,9 @@ public class EEItem {
 	public static Item lootBall;
 
 	public static void init() {
+		
+		System.out.println("==== Moon's EE: Loading Items! ====");
+		
 		Item philStone = new ItemPhilStone(2013).setItemName("PhilStone").setIconIndex(0).setCreativeTab(mod_EE.EEtab);
 		Item catalystStone = new ItemCatalystStone(2014).setItemName("catalystStone").setIconIndex(1).setCreativeTab(mod_EE.EEtab);
 		Item baseRing = new ItemBaseRing(2015).setItemName("baseRing").setIconIndex(2).setCreativeTab(mod_EE.EEtab);

@@ -22,6 +22,7 @@ import moonee.ee.blocks.TileEntityAlchChest;
 import moonee.ee.blocks.TileEntityCondenser;
 import moonee.ee.blocks.TileEntityDMFurnace;
 import moonee.ee.blocks.TileEntityRMFurnace;
+import moonee.ee.util.EEConfig;
 import net.minecraft.block.Block;
 
 public class EEBlock {
@@ -44,9 +45,9 @@ public class EEBlock {
 
 	public static void init() {
 		
-		
+		System.out.println("==== Moon's EE: Loading Blocks and Chests! ====");
 		//Blocks
-		rmBlock = new BlockRM(2001, 15).setBlockName("RedMatter").setCreativeTab(mod_EE.EEtab);
+		rmBlock = (new BlockRM(2001, 15)).setBlockName("RedMatter").setCreativeTab(mod_EE.EEtab);
 		dmBlock = new BlockDM(2002, 13).setBlockName("DarkMatter").setCreativeTab(mod_EE.EEtab);
 		iTorch = new BlockITorch(2003, 16).setLightValue(2.0F).setBlockName("ITorch").setCreativeTab(mod_EE.EEtab);
 		nCatt = new BlockNCatt(2004, 17).setBlockName("NovaCatt").setCreativeTab(mod_EE.EEtab);
